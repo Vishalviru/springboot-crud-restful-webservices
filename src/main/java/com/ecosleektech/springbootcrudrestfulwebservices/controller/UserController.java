@@ -29,6 +29,11 @@ public class UserController {
                 .orElseThrow(() -> new ResourceNotFoundException("User not found with id :" + userId));
     }
 
+    @GetMapping("/check")
+    public String check() {
+        return "Hello World";
+    }
+
     //create user
     @PostMapping
     public User createUser(@RequestBody User user) {
