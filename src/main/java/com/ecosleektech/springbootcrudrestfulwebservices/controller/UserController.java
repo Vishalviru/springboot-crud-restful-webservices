@@ -34,6 +34,11 @@ public class UserController {
         return "Hello World";
     }
 
+    @GetMapping("/test")
+    public String test() {
+        return "Tested Successfully";
+    }
+
     //create user
     @PostMapping
     public User createUser(@RequestBody User user) {
